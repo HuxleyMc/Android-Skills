@@ -14,12 +14,14 @@ android-skills/
 ├── template/           # A template to get you started
 │   └── SKILL.md
 ├── <skill-name>/       # Your awesome skill directory
-│   └── SKILL.md        # The definition file for the skill
+│   ├── SKILL.md        # The definition file for the skill
+│   └── AGENTS.md       # Optional: Agent usage guide (see below)
 └── ...
 ```
 
 - **`<skill-name>/`**: Each skill gets its own dedicated directory. The name should be kebab-case (e.g., `weather-checker`, `git-commit-helper`).
-- **`SKILL.md`**: The core file containing the skill's prompt, instructions, descriptions, and examples.
+- **`SKILL.md`**: The core file containing the skill's metadata, instructions, patterns, and examples.
+- **`AGENTS.md`** (optional): A companion file that provides agent-specific guidance on how to use the skill effectively. Include this when the skill requires specific context for AI agents.
 
 ## 🚀 How to Use
 
@@ -42,14 +44,19 @@ We love contributions! If you have a useful prompt or agent skill, please share 
     - Ensure you include a clear **Description**.
     - Provide detailed **Instructions** for the AI.
     - Include **Examples** of inputs and outputs.
-5.  **Commit and Push** your changes.
-6.  **Open a Pull Request** describing what your skill does.
+5.  **Add `AGENTS.md`** (optional): If your skill benefits from agent-specific guidance, create an `AGENTS.md` with:
+    - Quick start for agents
+    - Common tasks with examples
+    - Key patterns and tips
+6.  **Commit and Push** your changes.
+7.  **Open a Pull Request** describing what your skill does.
 
 ### Guidelines for a Good Skill
 
 - **Clarity**: Be specific in your instructions to the AI.
 - **Modularity**: Keep skills focused on a single domain or task.
 - **Examples**: Few-shot examples significantly improve performance.
+- **AGENTS.md**: Consider adding when the skill has complex usage patterns or requires specific context.
 
 ## 📄 License
 
